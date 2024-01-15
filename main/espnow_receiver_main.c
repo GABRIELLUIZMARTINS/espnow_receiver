@@ -15,7 +15,7 @@ typedef struct
     uint32_t valor3;
 } Dados;
 
-static const char *TAG = "espnow_receiver";
+static const char *TAG = "espnow_recv";
 
 // Função de inicialização do WiFi
 static void wifi_init() 
@@ -42,7 +42,7 @@ void on_data_received(const uint8_t *mac_addr, const uint8_t *data, int len)
     } else {
         ESP_LOGW(TAG, "Tamanho de dados incorreto recebido: %d, esperado: %d", len, sizeof(Dados));
     }
-    vTaskDelay(pdMS_TO_TICKS(1/1000)); // Delay 1 microsegundo
+    vTaskDelay(pdMS_TO_TICKS(1/1000)); // Delay 10 milisegundos
 
 }
 
