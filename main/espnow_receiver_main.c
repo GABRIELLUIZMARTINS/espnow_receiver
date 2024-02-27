@@ -61,7 +61,7 @@ void on_data_received(const uint8_t *mac_addr, const uint8_t *data, int len)
     } else {
         ESP_LOGW(TAG, "Tamanho de dados incorreto recebido: %d, esperado: %d", len, sizeof(Dados));
     }
-    vTaskDelay(pdMS_TO_TICKS(1/1000)); // Delay 10 milisegundos
+    vTaskDelay(pdMS_TO_TICKS(1/1000)); // Delay 1 microsegundo
 
 }
 
