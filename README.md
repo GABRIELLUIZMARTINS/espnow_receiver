@@ -7,5 +7,7 @@ Tests:
 
 To flash:
 get_idf && idf.py -p /dev/ttyACM0 flash
+
 To monitor:    
-    get_idf && idf.py -p /dev/ttyACM0 monitor | tee Teste_vida/data.log
+get_idf && idf.py -p /dev/ttyACM0 monitor | tee Teste_vida/data.log
+get_idf && idf.py -p /dev/ttyACM0 monitor | tee debug/data.log
