@@ -6,8 +6,6 @@
 #include "esp_wifi.h"
 #include "esp_now.h"
 #include <string.h>
-
-// Estrutura para armazenar os dados recebidos
 typedef struct 
 {
     uint32_t valor1;
@@ -84,3 +82,6 @@ void app_main()
     // Registrar a função de callback para dados recebidos
     ESP_ERROR_CHECK(esp_now_register_recv_cb(on_data_received));
 }
+
+// #define SOC_CLK_RC_FAST_FREQ_APPROX         17500000                            /*!< Approximate RC_FAST_CLK frequency in Hz */
+// #define SOC_CLK_RC_SLOW_FREQ_APPROX         136000                              /*!< Approximate RC_SLOW_CLK frequency in Hz */
